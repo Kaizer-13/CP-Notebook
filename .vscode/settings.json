@@ -7,6 +7,8 @@
         "latch": "cpp",
         "limits": "cpp",
         "semaphore": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "compare": "cpp",
+        "cstdint": "cpp"
     }
 }
