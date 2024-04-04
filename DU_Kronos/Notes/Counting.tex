@@ -1,0 +1,61 @@
+$1.$ \textbf{Lucas Theorem}
+
+
+For non-negative integers $m$ and $n$ and a prime $p$, the following congruence relation holds: :
+\begin{equation}
+\left(\begin{array}{c}
+m \\
+n
+\end{array}\right) \equiv \prod_{i=0}^k\left(\begin{array}{c}
+m_i \\
+n_i
+\end{array}\right) \quad(\bmod p),
+\end{equation}
+where :
+$$
+m=m_k p^k+m_{k-1} p^{k-1}+\cdots+m_1 p+m_0,
+$$
+and :
+$$
+n=n_k p^k+n_{k-1} p^{k-1}+\cdots+n_1 p+n_0
+$$
+are the base $p$ expansions of $m$ and $n$ respectively. This uses the convention that $\left(\begin{array}{c}m \\ n\end{array}\right)=0$ if $m \leq n$.
+
+\
+$2.$ \textbf{Stirling Numbers of the first kind}
+
+$S(n, k)$ counts the number of permutations of $n$ elements with $k$ disjoint cycles.
+\begin{equation}
+S(n, k)=(n-1) \cdot S(n-1, k)+S(n-1, k-1)
+\end{equation}
+where, $S(0,0)=1, S(n, 0)=S(0, n)=0$
+\begin{equation}
+\sum_{k=0}^n S(n, k)=n !
+\end{equation}
+$3.$ \textbf{Stirling Numbers of the second kind}
+
+\textbf{$S(n, k) \cdot k !=$} number of ways to color $n$ nodes using colors from 1 to $k$ such that each color is used at least once.
+
+
+An $r$-associated Stirling number of the second kind is the number of ways to partition a set of $n$ objects into $k$ subsets, with each subset containing at least $r$ elements. It is denoted by $S_r(n, k)$ and obeys the recurrence relation. 
+\begin{equation}
+S_r(n+1, k)=k S_r(n, k)+\left(\begin{array}{c}n \\ r-1\end{array}\right) S_r(n-r+1, k-1)   
+\end{equation}
+
+$4.$ \textbf{Bell Numbers}
+
+
+Counts the number of partitions of a set.
+\begin{equation}
+B_{n+1}=\sum_{k=0}^n\left(\frac{n}{k}\right) \cdot B_k
+\end{equation}
+$B_n=\sum_{k=0}^n S(n, k)$, where $S(n, k)$ is stirling number of second kind.
+
+$5.$ \textbf{Some identities}
+
+
+\textbf{Vandermonde's Identify}: $\sum_{k=0}^r\left(\begin{array}{c}m \\ k\end{array}\right)\left(\begin{array}{c}n \\ r-k\end{array}\right)=\left(\begin{array}{c}m+n \\ r\end{array}\right)$ 
+
+\textbf{Hockey-Stick Identify}: $n, r \in N, n>r, \sum_{i=r}^n\left(\begin{array}{l}i \\ r\end{array}\right)=\left(\begin{array}{l}n+1 \\ r+1\end{array}\right)$
+
+\textbf{Involutions}: permutations such that $p^2=$ identity permutation. $a_0=a_1=1$ and $a_n=a_{n-1}+(n-1) a_{n-2}$ for $n>1$.

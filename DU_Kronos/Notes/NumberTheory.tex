@@ -1,0 +1,21 @@
+\begin{equation}
+\sum_{k=1}^n \frac{1}{\operatorname{gcd}(k, n)}=\sum_{d \mid n} \frac{1}{d} \cdot \phi\left(\frac{n}{d}\right)=\frac{1}{n} \sum_{d \mid n} d \cdot \phi(d) \\
+\end{equation}
+\begin{equation}
+\sum_{k=1}^n \frac{k}{\operatorname{gcd}(k, n)}=\frac{n}{2} \cdot \frac{1}{n} \cdot \sum_{d \mid n} d \cdot \phi(d) \\
+\end{equation}
+\begin{equation}
+\sum_{k=1}^n \frac{n}{\operatorname{gcd}(k, n)}=2 * \sum_{k=1}^n \frac{k}{\operatorname{gcd}(k, n)}-1, \text { for, } n>1
+\end{equation}
+\begin{equation}
+\sum_{i=1}^n \sum_{j=1}^n[\operatorname{gcd}(i, j)=1]=\sum_{d=1}^n \mu(d)\left\lfloor\frac{n}{d}\right\rfloor^2 \\
+\end{equation}
+\begin{equation}
+\sum_{i=1}^n \sum_{j=1}^n \operatorname{gcd}(i, j)=\sum_{d=1}^n \phi(d)\left\lfloor\frac{n}{d}\right\rfloor^2 \\
+\end{equation}
+\begin{equation}
+\sum_{i=1}^n \sum_{j=1}^n i \cdot j[\operatorname{gcd}(i, j)=1]=\sum_{i=1}^n \phi(i) i^2 \\
+\end{equation}
+\begin{equation}
+\sum_{i=1}^n \sum_{j=1}^n \operatorname{lcm}(i, j)=\sum_{l=1}^n\left(\frac{\left(1+\left\lfloor\frac{n}{l}\right\rfloor\right)\left(\left\lfloor\frac{n}{l}\right\rfloor\right)}{2}\right)^2=\sum_{d \mid l} \mu(d) l d
+\end{equation}
