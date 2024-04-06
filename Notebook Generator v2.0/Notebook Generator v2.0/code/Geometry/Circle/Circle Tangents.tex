@@ -3,7 +3,24 @@ Can return 0, 1, or 2 tangents -- 0 if one circle contains the other (or overlap
 1 if the circles are tangent to each other (in which case .first = .second and the tangent line is perpendicular to the line between the centers).
 .first and .second give the tangency points at circle 1 and 2 respectively.
 To find the tangents of a circle with a point set r2 to 0.
-\begin{minted}{C++}
+\begin{minted}[breaklines = true,
+    breakanywhere = true,
+    frame=lines,    
+    fontfamily=tt,
+    linenos=false,
+    numberblanklines=true,
+    numbersep=2pt,
+    gobble=0,
+    framerule=1pt,
+    framesep=1mm,
+    funcnamehighlighting=true,
+    tabsize=1,
+    obeytabs=false,
+    mathescape=false
+    samepage=false, %with this setting you can force the list to appear on the same page
+    showspaces=false,
+    showtabs =false,
+    texcl=false]{C++}
 #include "Point.h"
 
 template<class P>

@@ -10,7 +10,24 @@ In the last case, if a corner $i$ is crossed, this is treated as happening on si
 The points are returned in the same order as the line hits the polygon.
 \texttt{extrVertex} returns the point of a hull with the max projection onto a line.\\
 Time: $O(\log n)$
-\begin{minted}{C++}
+\begin{minted}[breaklines = true,
+    breakanywhere = true,
+    frame=lines,    
+    fontfamily=tt,
+    linenos=false,
+    numberblanklines=true,
+    numbersep=2pt,
+    gobble=0,
+    framerule=1pt,
+    framesep=1mm,
+    funcnamehighlighting=true,
+    tabsize=1,
+    obeytabs=false,
+    mathescape=false
+    samepage=false, %with this setting you can force the list to appear on the same page
+    showspaces=false,
+    showtabs =false,
+    texcl=false]{C++}
 #include "Point.h"
 
 #define cmp(i,j) sgn(dir.perp().cross(poly[(i)%n]-poly[(j)%n]))

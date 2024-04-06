@@ -6,7 +6,24 @@ Returns a vector with the vertices of a polygon with everything to the left of t
 \includegraphics[width=\textwidth]{../code/Geometry/Polygon/PolygonCut}
 \vspace{-6mm}
 \end{minipage}
-\begin{minted}{C++}
+\begin{minted}[breaklines = true,
+    breakanywhere = true,
+    frame=lines,    
+    fontfamily=tt,
+    linenos=false,
+    numberblanklines=true,
+    numbersep=2pt,
+    gobble=0,
+    framerule=1pt,
+    framesep=1mm,
+    funcnamehighlighting=true,
+    tabsize=1,
+    obeytabs=false,
+    mathescape=false
+    samepage=false, %with this setting you can force the list to appear on the same page
+    showspaces=false,
+    showtabs =false,
+    texcl=false]{C++}
 /* Usage:
  *  vector<P> p = ...;
  *  p = polygonCut(p, P(0,0), P(1,0));

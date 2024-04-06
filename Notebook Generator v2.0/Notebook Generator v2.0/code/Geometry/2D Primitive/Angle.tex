@@ -1,6 +1,23 @@
 A class for ordering angles (as represented by int points and a number of rotations around the origin). Useful for rotational sweeping.
 Sometimes also represents points or vectors.
-\begin{minted}{C++}
+\begin{minted}[breaklines = true,
+    breakanywhere = true,
+    frame=lines,    
+    fontfamily=tt,
+    linenos=false,
+    numberblanklines=true,
+    numbersep=2pt,
+    gobble=0,
+    framerule=1pt,
+    framesep=1mm,
+    funcnamehighlighting=true,
+    tabsize=1,
+    obeytabs=false,
+    mathescape=false
+    samepage=false, %with this setting you can force the list to appear on the same page
+    showspaces=false,
+    showtabs =false,
+    texcl=false]{C++}
 /* Usage:
  *  vector<Angle> v = {w[0], w[0].t360() ...}; // sorted
  *  int j = 0; rep(i,0,n) { while (v[j] < v[i].t180()) ++j; }

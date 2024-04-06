@@ -7,7 +7,24 @@ Products of three coordinates are used in intermediate steps so watch out for ov
 \begin{minipage}{15mm}
 \includegraphics[width=\textwidth]{"../code/Geometry/2D Primitive/SegmentIntersection"}
 \end{minipage}
-\begin{minted}{C++}
+\begin{minted}[breaklines = true,
+    breakanywhere = true,
+    frame=lines,    
+    fontfamily=tt,
+    linenos=false,
+    numberblanklines=true,
+    numbersep=2pt,
+    gobble=0,
+    framerule=1pt,
+    framesep=1mm,
+    funcnamehighlighting=true,
+    tabsize=1,
+    obeytabs=false,
+    mathescape=false
+    samepage=false, %with this setting you can force the list to appear on the same page
+    showspaces=false,
+    showtabs =false,
+    texcl=false]{C++}
 /* Usage:
  * vector<P> inter = segInter(s1,e1,s2,e2);
  * if (sz(inter)==1)

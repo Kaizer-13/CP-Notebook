@@ -5,7 +5,24 @@ Returns the shortest distance between point p and the line segment from point s 
 \vspace{-10mm}
 \includegraphics[width=\textwidth]{"../code/Geometry/2D Primitive/SegmentDistance"}
 \end{minipage}
-\begin{minted}{C++}
+\begin{minted}[breaklines = true,
+    breakanywhere = true,
+    frame=lines,    
+    fontfamily=tt,
+    linenos=false,
+    numberblanklines=true,
+    numbersep=2pt,
+    gobble=0,
+    framerule=1pt,
+    framesep=1mm,
+    funcnamehighlighting=true,
+    tabsize=1,
+    obeytabs=false,
+    mathescape=false
+    samepage=false, %with this setting you can force the list to appear on the same page
+    showspaces=false,
+    showtabs =false,
+    texcl=false]{C++}
 /* Usage: 
  *  Point<double> a, b(2,2), p(1,1);
  *  bool onSegment = segDist(a,b,p) < 1e-10;
