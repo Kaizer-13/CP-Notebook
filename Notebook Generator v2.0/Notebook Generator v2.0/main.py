@@ -227,7 +227,7 @@ def gen(level):
 
   for file in files:
     name, ext = os.path.splitext(file)
-    if ext not in ['.cpp', '.py', '.java', '.tex', '.h']:
+    if ext not in ['.cpp', '.py', '.java', '.tex', '.h','.sh']:
       continue
     name = re.sub('_','\\_', name)
 
