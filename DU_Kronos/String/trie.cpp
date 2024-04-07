@@ -1,10 +1,10 @@
-#define N       200000 /// total number of characters given as input
+#define N       200000 // total number of characters given as input
 #define S       26
 
 int root,now;
 int nxt[N][S], cnt[N];
 
-/// will be called from main
+// will be called from main
 void init(){
   root = now = 1;
   CLR(nxt),CLR(cnt);
@@ -32,8 +32,8 @@ inline bool Find(char s[],int sz){
   return (cnt[cur]!=0);
 }
 
-/// It's better to call the Delete() after checking if the
-/// string we wanna delete actually exists in the trie
+// It's better to call the Delete() after checking if the
+// string we wanna delete actually exists in the trie
 inline void Delete(char s[],int sz){
   int cur = root, to;
   for(int i=0 ; i<sz ; i++){

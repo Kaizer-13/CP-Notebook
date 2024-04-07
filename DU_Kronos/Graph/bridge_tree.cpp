@@ -1,11 +1,11 @@
-/***
+/*
   1 based indexing
 
   call to processBridge(node,edges) generates bridge tree
   and the edge list of that is brTree
 
   Clear ed , isBridge , brTree per test case
- ***/
+ */
 
 const int MAXN = ?;
 const int MAXE = ?;
@@ -14,13 +14,13 @@ struct edges {
   int u,v;
 } ara[MAXE];
 
-vector <int> ed[MAXN]; /// actual graph
-vector <int> isBridge[MAXN]; /// if the edge is a bridge, the entry will be 1
-vector <int> brTree[MAXN]; /// edges of the bridge tree
+vector <int> ed[MAXN]; // actual graph
+vector <int> isBridge[MAXN]; // if the edge is a bridge, the entry will be 1
+vector <int> brTree[MAXN]; // edges of the bridge tree
 
 bool vis[MAXN];
 int st[MAXN], low[MAXN], Time = 0;
-int cnum; /// number of nodes in bridge tree
+int cnum; // number of nodes in bridge tree
 int comp[MAXN];
 
 void findBridge(int s,int par) {
@@ -71,7 +71,7 @@ void processBridge(int n,int m) {
     }
   }
 
-  n = cnum; ///number of nodes in the bridge tree
+  n = cnum; //number of nodes in the bridge tree
 
   for(int i=1; i<=m; i++) {
     if(comp[ara[i].u] != comp[ara[i].v]) {

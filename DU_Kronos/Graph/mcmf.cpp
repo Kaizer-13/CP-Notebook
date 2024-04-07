@@ -1,4 +1,4 @@
-/**** 1 BASED NODE INDEXING. Comp : E * flow ***/
+/* 1 BASED NODE INDEXING. Comp : E * flow */
 
 namespace mcmf {
   using T = int;
@@ -35,13 +35,13 @@ namespace mcmf {
     for(int i=1; i<=n; i++) mCap[i] = dis[i] = INF;
     queue <int> q;
     dis[src] = 0;
-    vis[src] = true; /// src is in the queue now
+    vis[src] = true; // src is in the queue now
     q.push(src);
 
     while(!q.empty()){
       int u = q.front();
       q.pop();
-      vis[u] = false; /// u is not in the queue now
+      vis[u] = false; // u is not in the queue now
       for(int i=0; i<(int)ed[u].size(); i++) {
         Edge &e = ed[u][i];
         int v = e.to;

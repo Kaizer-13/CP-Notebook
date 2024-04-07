@@ -9,6 +9,7 @@
         "semaphore": "cpp",
         "valarray": "cpp",
         "compare": "cpp",
-        "cstdint": "cpp"
+        "cstdint": "cpp",
+        "vector": "cpp"
     }
 }

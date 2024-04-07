@@ -1,4 +1,4 @@
-/***
+/*
  * N = maximum possible string size
  * There won't be more that 2N - 1 nodes
  * There won't be more that 3N - 4 transitions
@@ -14,14 +14,14 @@
  * If terminal[i] = true, then sub_i is a suffix of str
  * There suffix link of node x to node y,
  Iff sub_y is the largest suffix of sub_x that is not endpos equivalent to node x.
- ***/
+ */
 namespace sa{
-  const int MAXN = 100005 << 1; /// 2 * maximum possible string size
-  const int MAXC = 26; /// Size of the character set
+  const int MAXN = 100005 << 1; // 2 * maximum possible string size
+  const int MAXC = 26; // Size of the character set
 
   char str[MAXN];
 
-  int n, sz, last; /// sz = number of nodes in the automaton( node indexing is 0 based)
+  int n, sz, last; // sz = number of nodes in the automaton( node indexing is 0 based)
   int len[MAXN], link[MAXN], ed[MAXN][MAXC], cnt[MAXN];
   bool terminal[MAXN];
   vector <int> G[MAXN];
@@ -68,7 +68,7 @@ namespace sa{
     last = cur;
   }
 
-  /// needed to generate cnt[]
+  // needed to generate cnt[]
   void dfs(int s) {
     for(auto x : G[s]) dfs(x), cnt[s] += cnt[x];
   }
@@ -78,12 +78,12 @@ namespace sa{
     int n = strlen(str);
     for(int i=0;i<n;i++) extend(scale(str[i]));
 
-    /// construction of cnt[]
+    // construction of cnt[]
     for(int i=1;i<sz;i++) G[link[i]].pb(i);
     dfs(0);
     for(int i=0;i<sz;i++) G[i].clear();
 
-    /// construction of terminal[]
+    // construction of terminal[]
     for(int i=last;i!=-1;i=link[i]) terminal[i] = true;
   }
 }

@@ -1,4 +1,4 @@
-/*Description : Find hashes of a tree when rooted at each possible
+/* Description : Find hashes of a tree when rooted at each possible
 node(unrooted tree isomorphism test).Time : O(n)*/
 const int sz = 2e5 + 5,mod = 1e9 + 7;
 ll hval[sz], h[sz], dp[sz], rans[sz];

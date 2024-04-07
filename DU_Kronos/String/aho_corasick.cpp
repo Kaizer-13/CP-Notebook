@@ -1,4 +1,4 @@
-/***
+/*
   Given n patterns and a text T, for every pattern
   you have to output the number of times that pattern
   appears in the text.
@@ -22,14 +22,14 @@
  * Suppose sum of the length of the characters is N. Text length is also
  at most N. If all the patterns are unique, total number of occurrences
  of all the patterns will not be more than " N sqrt(N) ".
- ***/
+ */
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-const int N = ?; /// Total number of characters in pattern
-const int A = ?; /// Alphabet size
+const int N = ?; // Total number of characters in pattern
+const int A = ?; // Alphabet size
 
 struct AC {
   int nd, pt;

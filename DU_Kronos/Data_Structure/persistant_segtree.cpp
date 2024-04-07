@@ -1,6 +1,6 @@
-/** Persistent Segment Tree using static Array
+/* Persistent Segment Tree using static Array
   Point Update, Range Sum
-  Initialize ncnt to 0 in every test case **/
+  Initialize ncnt to 0 in every test case */
 
 const int MAX = 100010;
 
@@ -16,9 +16,9 @@ struct node {
   }
 } tree[ ? ];
 
-/// input araay
+// input araay
 int ara[MAX];
-/// root nodes for all versions
+// root nodes for all versions
 int version[MAX];
 
 void build(int n,int st,int ed) {

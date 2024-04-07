@@ -1,13 +1,13 @@
-/***
+/*
   Given an array of size n, each value in array can be expressed using
   20 bits.
 Query : L R K
 max(a_i ^ K) for L <= i <= R
- ***/
+ */
 
 
-const int MAX = 200010; /// maximum size of array
-const int B = 19; /// maximum number of bits in a value - 1
+const int MAX = 200010; // maximum size of array
+const int B = 19; // maximum number of bits in a value - 1
 int root[MAX], ptr = 0;
 
 struct node {
