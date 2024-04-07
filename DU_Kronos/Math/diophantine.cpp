@@ -1,19 +1,25 @@
-void print_solution(int a, int b, int c)
-{
-    int x, y;
-    if (a == 0 && b == 0) {
-        if (c == 0) {
-            cout << "Infinite Solutions Exist" << endl;
-        }
-        else {
-            cout << "No Solution exists" << endl;
-        }
+int gcd(int a, int b, int& x, int& y) {
+    if (b == 0) {
+        x = 1;
+        y = 0;
+        return a;
     }
-    int gcd = gcd_extend(a, b, x, y);
-    if (c % gcd != 0) {
-        cout<< "No Solution exists"<< endl;
+    int x1, y1;
+    int d = gcd(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - y1 * (a / b);
+    return d;
+}
+
+bool find_any_solution(int a, int b, int c, int &x0, int &y0, int &g) {
+    g = gcd(abs(a), abs(b), x0, y0);
+    if (c % g) {
+        return false;
     }
-    else {
-        cout << "x = " << x * (c / gcd)<< ", y = " << y * (c / gcd)<< endl;
-    }
+
+    x0 *= c / g;
+    y0 *= c / g;
+    if (a < 0) x0 = -x0;
+    if (b < 0) y0 = -y0;
+    return true;
 }
