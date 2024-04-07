@@ -1,6 +1,6 @@
-/** Persistent Segment Tree using static Array
+/* Persistent Segment Tree using static Array
   Point Update, Range Sum
-  Initialize ncnt to 0 in every test case **/
+  Initialize ncnt to 0 in every test case */
 
 const int MAX = 100010;
 

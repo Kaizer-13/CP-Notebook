@@ -1,4 +1,4 @@
-/***
+/*
     S(mask,i) denotes those submasks of mask which differ
     from mask only in the least significant i+1 bits ( 0, 1, 2, ...., i --> 0 based indexing)
     Example : S(1011010,3) = {1011010,1010010,1011000,1010000}
@@ -18,7 +18,7 @@
         Sum(mask, i) = Sum(mask, i-1) + Sum(mask ^ (1<<i), i-1)
     else
         Sum(mask, i) = Sum(mask, i-1)
-***/
+*/
 
 ///iterative version
     for(int mask = 0; mask < (1<<N); ++mask){
@@ -37,3 +37,11 @@
                 F[mask] += F[mask^(1<<i)];
         }
 /// O( N * 2^N )
+
+
+
+
+
+/*
+ * c = x&-x, r = x+c; (((r^x) >> 2)/c) | r is the next number after x with the same number of bits set. 
+ * /
