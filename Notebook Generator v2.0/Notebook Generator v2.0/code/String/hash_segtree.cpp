@@ -1,4 +1,4 @@
-/***
+/*
  * Everything is 0 based
  * Call precal() once in the program
  * Call update(1,0,n-1,i,j,val) to update the value of position
@@ -8,7 +8,7 @@
  * Before any update/query
  - Call init(str) where str is the string to be hashed
  - Call build(1,0,n-1)
- ***/
+ */
 
 #define INVALID_CHAR        -1
 
@@ -24,7 +24,7 @@ namespace strhash {
 
   void init(char *str) {
     n = strlen(str);
-    for(int i=0;i<n;i++) ara[i] = str[i]-'0'+1; /// scale str[i] if needed
+    for(int i=0;i<n;i++) ara[i] = str[i]-'0'+1; // scale str[i] if needed
   }
 
   void precal() {

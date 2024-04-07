@@ -1,14 +1,13 @@
-/***
+/*
  * 1 based index for variables
  * F = (a op b) and (c op d) and ...... (y op z)
  a, b, c ... are the variables
  sat::satisfy() returns true if there is some assignment(True/False)
  for all the variables that make F = True
- * init() at the start of every case
- ***/
+ * init() at the start of every case*/
 
 namespace sat{
-  const int MAX = 200010; /// number of variables * 2
+  const int MAX = 200010; // number of variables * 2
   bool vis[MAX];
   vector <int> ed[MAX], rev[MAX];
   int n, m, ptr, dfs_t[MAX], ord[MAX], par[MAX];
@@ -17,7 +16,7 @@ namespace sat{
     return ((x) <= n ? (x + n) : (x - n));
   }
 
-  /// Call init once
+  // Call init once
   void init(int vars){
     n = vars, m = vars << 1;
     for (int i = 1; i <= m; i++){
@@ -26,29 +25,29 @@ namespace sat{
     }
   }
 
-  /// Adding implication, if a then b ( a --> b )
+  // Adding implication, if a then b ( a --> b )
   inline void add(int a, int b){
     ed[a].push_back(b);
     rev[b].push_back(a);
   }
 
 
-  /// (a or b) is true --> OR(a,b)
-  /// (¬a or b) is true --> OR(inv(a),b)
-  /// (a or ¬b) is true --> OR(a,inv(b))
-  /// (¬a or ¬b) is true --> OR(inv(a),inv(b))
+  // (a or b) is true --> OR(a,b)
+  // (¬a or b) is true --> OR(inv(a),b)
+  // (a or ¬b) is true --> OR(a,inv(b))
+  // (¬a or ¬b) is true --> OR(inv(a),inv(b))
   inline void OR(int a, int b){
     add(inv(a), b);
     add(inv(b), a);
   }
 
-  /// same rule as or
+  // same rule as or
   inline void AND(int a, int b){
     add(a, b);
     add(b, a);
   }
 
-  /// same rule as or
+  // same rule as or
   void XOR(int a,int b){
     add(inv(b), a);
     add(a, inv(b));
@@ -56,7 +55,7 @@ namespace sat{
     add(b, inv(a));
   }
 
-  /// same rule as or
+  // same rule as or
   inline void XNOR(int a, int b){
     add(a,b);
     add(b,a);
@@ -64,8 +63,8 @@ namespace sat{
     add(inv(b), inv(a));
   }
 
-  /// (x <= n) means forcing variable x to be true
-  /// (x = n + y) means forcing variable y to be false
+  // (x <= n) means forcing variable x to be true
+  // (x = n + y) means forcing variable y to be false
   inline void force_true(int x){
     add(inv(x), x);
   }
@@ -96,7 +95,7 @@ namespace sat{
     }
   }
 
-  /// Returns true if the system is 2-satisfiable and returns the solution (vars set to true) in vector res
+  // Returns true if the system is 2-satisfiable and returns the solution (vars set to true) in vector res
   bool satisfy(vector <int>& res){
     build();
     CLR(vis);

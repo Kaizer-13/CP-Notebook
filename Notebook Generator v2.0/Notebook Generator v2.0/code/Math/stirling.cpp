@@ -1,4 +1,4 @@
-/// Finds the number ways to put n balls into k indistinguishable boxes such
+// Finds the number ways to put n balls into k indistinguishable boxes such
 that no box is empty`.
 
 int stirling2(int n, int k)
@@ -12,7 +12,7 @@ int stirling2(int n, int k)
 	return dp[n][k] = stirling2(n-1,k-1) + stirling2(n-1,k)*k;
 }
 
-/// Finds the number of ways to put n elements into k cycles where no cycle
+// Finds the number of ways to put n elements into k cycles where no cycle
 is empty
 
 int stirling1(int n, int k)

@@ -3,10 +3,8 @@ using ll = long long;
 struct UnionFind {
     vector<int> UF;
     int cnt;
-    UnionFind(int N) : UF(N, -1),
-                       ,→ cnt(N) {}
-    int find(int v) { return UF[v] < 0 ? v : UF[v] =
-                                 ,→ find(UF[v]); }
+    UnionFind(int N) : UF(N, -1), cnt(N) {}
+    int find(int v) { return UF[v] < 0 ? v : UF[v] = find(UF[v]); }
     bool join(int v, int w) {
         if ((v = find(v)) == (w = find(w))) return false;
         if (UF[v] > UF[w]) swap(v, w);
@@ -26,9 +24,8 @@ struct KruskalMST {
     T mstWeight;
     vector<Edge> mstEdges;
     UnionFind uf;
-    KruskalMST(int V, vector<Edge> edges) : mstWeight(),
-                                            ,→ uf(V) {
-        sort(edges.begin(), edges.end(), [&](const Edge &a, ,→ const Edge &b) {
+    KruskalMST(int V, vector<Edge> edges) : mstWeight(), uf(V) {
+        sort(edges.begin(), edges.end(), [&](const Edge &a, const Edge &b) {
             return get<2>(a) < get<2>(b);
         });
         for (auto &&e : edges) {
@@ -41,9 +38,9 @@ struct KruskalMST {
     }
 };
 template <class T>
-struct ManhattanMST : public,→ KruskalMST<T> {
+struct ManhattanMST : public KruskalMST<T> {
     using Edge = typename KruskalMST<T>::Edge;
-    static vector<Edge> generateCandidates(vector<pair<T, T>>,→ P) {
+    static vector<Edge> generateCandidates(vector<pair<T, T>> P) {
         vector<int> id(P.size());
         iota(id.begin(), id.end(), 0);
         vector<Edge> ret;
@@ -57,7 +54,7 @@ struct ManhattanMST : public,→ KruskalMST<T> {
                 auto it = M.lower_bound(-P[i].second);
                 for (; it != M.end(); it = M.erase(it)) {
                     int j = it->second;
-                    T dx = P[i].first - P[j].first, dy = P[i].second,→ - P[j].second;
+                    T dx = P[i].first - P[j].first, dy = P[i].second - P[j].second;
                     if (dy > dx) break;
                     ret.emplace_back(i, j, dx + dy);
                 }
@@ -82,5 +79,5 @@ int main() {
     for (auto &&p : P) cin >> p.first >> p.second;
     ManhattanMST mst(P);
     cout << mst.mstWeight << '\n';
-    for (auto &&[v, w, weight] : mst.mstEdges) cout << v << ' ,→ ' << w << '\n'; return 0;
+    for (auto &&[v, w, weight] : mst.mstEdges) cout << v << ' ' << w << '\n'; return 0;
 }

@@ -1,4 +1,4 @@
-/***
+/*
  * call init at the start of every test case
  * matchL[x] = y means node x of left side is matched to node y of right side
  * matchR[y] = x means node y of right side is matched to node x of left side
@@ -7,7 +7,7 @@
  Node x is in the left and node y is in the right side
 
  * worst case complexity V*E
- ***/
+ */
 
 namespace bpm{
   const int L = 105;
@@ -16,7 +16,7 @@ namespace bpm{
   vector <int> G[L];
   int matchR[R], matchL[L], vis[L], it;
 
-  /// n = number of nodes in the left side
+  // n = number of nodes in the left side
   void init(int n) {
     SET(matchL), SET(matchR), CLR(vis);
     it = 1;

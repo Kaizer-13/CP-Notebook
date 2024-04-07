@@ -16,9 +16,9 @@ struct node {
   }
 } tree[ ? ];
 
-/// input araay
+// input araay
 int ara[MAX];
-/// root nodes for all versions
+// root nodes for all versions
 int version[MAX];
 
 void build(int n,int st,int ed) {

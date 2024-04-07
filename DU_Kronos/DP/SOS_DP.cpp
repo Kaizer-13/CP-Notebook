@@ -37,3 +37,7 @@
                 F[mask] += F[mask^(1<<i)];
         }
 // O( N * 2^N )
+
+/*
+ * c = x&-x, r = x+c; (((r^x) >> 2)/c) | r is the next number after x with the same number of bits set. 
+ * /

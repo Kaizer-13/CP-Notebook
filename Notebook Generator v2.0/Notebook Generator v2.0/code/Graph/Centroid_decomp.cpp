@@ -1,8 +1,8 @@
 
-vector <int> ed[MAX]; /// adjacency list of the input tree
-bool isCentroid[MAX]; /// if the node is already a centroid of some part
+vector <int> ed[MAX]; // adjacency list of the input tree
+bool isCentroid[MAX]; // if the node is already a centroid of some part
 int sub[MAX], cpar[MAX], clevel[MAX];
-int dis[20][MAX]; /// dis[i][j] = distance of node j from the root of the i'th level of decomposition
+int dis[20][MAX]; // dis[i][j] = distance of node j from the root of the i'th level of decomposition
 
 void calcSubTree(int s,int p) {
   sub[s] = 1;
@@ -13,7 +13,7 @@ void calcSubTree(int s,int p) {
   }
 }
 
-int nn; /// number of nodes in the part
+int nn; // number of nodes in the part
 
 int getCentroid(int s,int p) {
   for(int x : ed[s]) {
@@ -30,7 +30,7 @@ void setDis(int s, int from, int p, int lev) {
   }
 }
 
-///complexity --> O(nlog(n))
+//complexity --> O(nlog(n))
 void decompose(int s,int p,int lev) {
   calcSubTree(s,p);
   nn = sub[s];
